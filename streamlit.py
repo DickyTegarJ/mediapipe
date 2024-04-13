@@ -13,7 +13,7 @@ word=""
 sentence=""
 last_word_time = time.time()
 
-@st.cache
+@st.cache_resource
 def load_model():
     return joblib.load("RFC_model.sav")
 
