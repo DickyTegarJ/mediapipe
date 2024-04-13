@@ -12,8 +12,12 @@ mp_holistic = mp.solutions.holistic
 word=""
 sentence=""
 last_word_time = time.time()
-RFC = joblib.load("RFC_model.sav")
 
+@st.cache
+def load_model():
+    return joblib.load("RFC_model.sav")
+
+RFC = load_model()
 
 
 with st.container():
