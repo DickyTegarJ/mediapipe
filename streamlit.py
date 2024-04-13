@@ -25,7 +25,7 @@ with st.container():
     text_sentence=st.empty()
 
 with st.container():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
     with mp_holistic.Holistic(min_detection_confidence=0.3,min_tracking_confidence=0.3) as holistic:
         while cap.isOpened():
             curr_word_time = time.time()
