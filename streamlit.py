@@ -87,7 +87,7 @@ with st.container():
                             
 
             frame_placeholder.image(image,channels="RGB")
-            if cv2.waitKey(1) & 0xFF == ord('x'):
+            if cv2.waitKey(1):
                 break
             
     cap.release()
